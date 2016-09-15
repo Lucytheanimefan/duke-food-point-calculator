@@ -4,7 +4,7 @@ var fallBreakEnd = new Date(2016,10,12);
 var thanksgivingBreakStart=new Date(2016,11,22);
 var thanksgivingBreakEnd=new Date(2016,11,28);
 
-
+console.log("fall break: "+fallBreakStart.toString()+" to "+fallBreakEnd.toString());
 
 function calculateFoodPoints() {
     var numFoodPts = $("#numFoodPoints").val();
@@ -24,6 +24,15 @@ function calculateFoodPoints() {
     updateUI(pointsPerDay.toFixed(2));
     console.log("done");
 
+}
+
+function calculateBreaks(){
+    var breakdays=0;
+
+}
+
+function checked(divID){
+    return $("#"+divID).is(':checked');
 }
 
 function getDateDiff(firstDate, secondDate) {
