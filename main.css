@@ -50,3 +50,9 @@ input[type=button] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#results{
+    margin-top: 15px;
+    text-align: center;
+    font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
