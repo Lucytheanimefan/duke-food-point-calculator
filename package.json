@@ -1,0 +1,22 @@
+{
+  "name": "duke-food-point-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucytheanimefan/duke-food-point-calculator.git"
+  },
+  "author": "Lucy Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucytheanimefan/duke-food-point-calculator/issues"
+  },
+  "homepage": "https://github.com/Lucytheanimefan/duke-food-point-calculator#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
