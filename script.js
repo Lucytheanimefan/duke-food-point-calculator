@@ -4,9 +4,11 @@ var fallBreakEnd = new Date(2016,10,12);
 var thanksgivingBreakStart=new Date(2016,11,22);
 var thanksgivingBreakEnd=new Date(2016,11,28);
 
+
+
 function calculateFoodPoints() {
     var numFoodPts = $("#numFoodPoints").val();
-    if (isNaN(numFoodPts) || parseInt(numFoodPts) < 0) {
+    if (isNaN(numFoodPts) || parseFloat(numFoodPts) < 0) {
         alert("Must input a positive numeric value");
         return;
     }
@@ -18,8 +20,8 @@ function calculateFoodPoints() {
     var fallBreak = getDateDiff(fallBreakStart,fallBreakEnd);
     var thanksgivingBreak = getDateDiff(thanksgivingBreakStart,thanksgivingBreakEnd);
     numDays=numDays-fallBreak-thanksgivingBreak;
-    var pointsPerDay = parseInt(numFoodPts/numDays);
-    updateUI(pointsPerDay);
+    var pointsPerDay = parseFloat(numFoodPts/numDays);
+    updateUI(pointsPerDay.toFixed(2));
     console.log("done");
 
 }
