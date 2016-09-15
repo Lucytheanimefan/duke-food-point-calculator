@@ -13,15 +13,19 @@
 </head>
 
 <body>
-    <form class="smart-green">
+    <form class="dukeblue">
         <label class="input">Current number of food points: </label>
         <br>
-        <input class="input" type="text">
+        <input id="numFoodPoints" class="input" type="text">
         <br>
         <br>
-        <input type="submit" value="Submit">
+        <input type="button" onclick="calculateFoodPoints()">
     </form>
 
+    <div id="results"></div>
+
+<script type="text/javascript" src="dependencies/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
