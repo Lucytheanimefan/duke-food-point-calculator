@@ -1,4 +1,4 @@
-var fallSemesterEnd_2016 = new Date(2016, 11, 19);
+var fallSemesterEnd_2016 = new Date(2016, 12, 19);
 var fallBreakStart = new Date(2016, 9, 07);
 var fallBreakEnd = new Date(2016, 9, 12);
 var thanksgivingBreakStart = new Date(2016, 10, 22);
@@ -13,7 +13,6 @@ console.log(thanksgivingBreakStart);
 console.log(thanksgivingBreakEnd);
 
 function calculateFoodPoints() {
-    fallBreakHome = true;
     thanksgivingBreakHome = true;
     calculateBreaks();
     var numDays = 0;
@@ -23,20 +22,14 @@ function calculateFoodPoints() {
         return;
     }
     var today = new Date();
-    console.log("Today: "+today.toString())
+    console.log("Today: " + today.toString())
 
-    if (fallBreakHome && thanksgivingBreakHome) {
-        numDays = getDateDiff(today, fallBreakStart) + getDateDiff(fallBreakEnd, thanksgivingBreakStart) + getDateDiff(thanksgivingBreakEnd, fallSemesterEnd_2016);
-        console.log("spending both at home: "+numDays.toString());
-    } else if (fallBreakHome) {
-        numDays = getDateDiff(today, fallBreakStart) + getDateDiff(fallBreakEnd, fallSemesterEnd_2016);
-        console.log("Spending only fall break at home: "+numDays.toString())
-    } else if (thanksgivingBreakHome) {
+    if (thanksgivingBreakHome) {
         numDays = getDateDiff(today, thanksgivingBreakStart) + getDateDiff(thanksgivingBreakEnd, fallSemesterEnd_2016);
-        console.log("spending only thanksgibing at home: "+numDays.toString())
+        console.log("spending only thanksgibing at home: " + numDays.toString())
     } else {
         numDays = getDateDiff(today, fallSemesterEnd_2016);
-        console.log("spending both breaks at school: "+numDays.toString());
+        console.log("spending both breaks at school: " + numDays.toString());
     }
     /*
         var fallBreak = getDateDiff(fallBreakStart,fallBreakEnd);
@@ -51,10 +44,6 @@ function calculateFoodPoints() {
 
 function calculateBreaks() {
     var breakdays = 0;
-    if (checked("fallbreak")) {
-        fallBreakHome = false;
-        console.log("fallbreak checked");
-    }
     if (checked("thanksgiving")) {
         thanksgivingBreakHome = false;
         console.log("thanksgiving checked");
